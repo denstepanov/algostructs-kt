@@ -1,4 +1,4 @@
-package org.example.algorithms.sorts
+package algostructs.algorithms.sorts
 
 /**
  * Быстрая сортировка слиянием

@@ -1,4 +1,4 @@
-package algorithms
+package algostructs.algorithms
 
 fun isPalindrome(input: String): Boolean {
     if (input.isBlank()) {

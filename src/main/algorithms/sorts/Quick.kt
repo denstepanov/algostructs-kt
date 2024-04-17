@@ -1,6 +1,6 @@
-package org.example.algorithms.sorts
+package algostructs.algorithms.sorts
 
-import org.example.utils.swap
+import algostructs.utils.swap
 
 /**
  * Быстрая сортировка Хоара

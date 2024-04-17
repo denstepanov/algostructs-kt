@@ -1,6 +1,6 @@
-package algorithms.sorts
+package algostructs.algorithms.sorts
 
-import org.example.utils.swap
+import algostructs.utils.swap
 
 /**
  * Пузырьковая сортировка

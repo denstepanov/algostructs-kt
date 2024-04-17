@@ -1,4 +1,4 @@
-package org.example.algorithms
+package algostructs.algorithms
 
 fun <T : Comparable<T>> MutableList<T>.search(
     elem: T,
