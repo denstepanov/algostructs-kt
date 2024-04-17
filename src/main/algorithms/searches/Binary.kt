@@ -1,6 +1,6 @@
-package algostructs.algorithms
+package algostructs.algorithms.searches
 
-fun <T : Comparable<T>> MutableList<T>.search(
+fun <T : Comparable<T>> MutableList<T>.binarySearch(
     elem: T,
     start: Int = 0,
     end: Int = this.size - 1): Int {
@@ -11,10 +11,10 @@ fun <T : Comparable<T>> MutableList<T>.search(
         }
 
         if (this[middle] > elem) {
-            return this.search(elem, start, middle - 1)
+            return this.binarySearch(elem, start, middle - 1)
         }
 
-        return this.search(elem, middle + 1, end)
+        return this.binarySearch(elem, middle + 1, end)
     }
     return -1
 }
