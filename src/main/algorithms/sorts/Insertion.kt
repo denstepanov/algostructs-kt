@@ -5,7 +5,7 @@ import algostructs.utils.swap
 /**
  * Сортировка вставками
  *
- * Сортировка состоит из двух массивов: первый - отвечает за размер подмассива,
+ * Сортировка использует два указателя: первый - указывает на последний элемент подмассива,
  * второй - пробегает подмассив в обратном порядке и размещает последний элемент подмассива в подходящее место.
  * Как работает вложенный цикл:
  * 1. Берёт последний элемент подмассива,
@@ -16,28 +16,15 @@ import algostructs.utils.swap
  * // Средний случай O(n^2)
  * // Худший случай O(n^2)
  */
-fun <T : Comparable<T>> MutableList<T>.insertionSort(descendantOrder: Boolean = false) {
+fun <T : Comparable<T>> MutableList<T>.insertionSort() {
     for (sublistLastIndex in this.indices) {
         for (index in sublistLastIndex downTo 0) {
-            when (descendantOrder) {
-                false -> {
-                    if (index > 0 && this[index] < this[index - 1]) {
-                        this.swap(index, index - 1)
-                    }
-                    else {
-                        break
-                    }
-                }
-                true -> {
-                    if (index > 0 && this[index] > this[index - 1]) {
-                        this.swap(index, index - 1)
-                    }
-                    else {
-                        break
-                    }
-                }
+            if (index > 0 && this[index] < this[index - 1]) {
+                this.swap(index, index - 1)
             }
-
+            else {
+                break
+            }
         }
     }
 }
